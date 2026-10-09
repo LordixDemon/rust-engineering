@@ -1,0 +1,10 @@
+.data/
+__pycache__/
+.venv/
+.ruff_cache/
+*.pyc
+*.egg-info/
+build/
+dist/
+.DS_Store
+installation.json

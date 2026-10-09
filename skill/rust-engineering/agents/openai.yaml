@@ -1,0 +1,6 @@
+interface:
+  display_name: "Rust Engineering"
+  short_description: "Version-aware Rust and async server engineering"
+  default_prompt: "Use $rust-engineering to implement this Rust change using APIs verified against my toolchain, lockfile, features, and MSRV."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "ecosystem": "rust",
+  "max_file_bytes": 2000000,
+  "sources": [
+    {
+      "id": "rust-std",
+      "repository": "https://github.com/rust-lang/rust.git",
+      "ref": "@rust-stable",
+      "version_policy": "exact stable Rust release tag",
+      "paths": [
+        "library/core/src",
+        "library/alloc/src",
+        "library/std/src",
+        "src/doc/rustc/src"
+      ],
+      "suffixes": [
+        ".rs",
+        ".md"
+      ],
+      "license_path": "LICENSE-APACHE"
+    },
+    {
+      "id": "rust-book",
+      "repository": "https://github.com/rust-lang/book.git",
+      "ref": "@rust-stable:src/doc/book",
+      "version_policy": "book submodule commit shipped with the stable Rust release",
+      "paths": [
+        "src"
+      ],
+      "suffixes": [
+        ".md",
+        ".rs"
+      ],
+      "license_path": "LICENSE-APACHE"
+    },
+    {
+      "id": "rust-reference",
+      "repository": "https://github.com/rust-lang/reference.git",
+      "ref": "@rust-stable:src/doc/reference",
+      "version_policy": "reference submodule commit shipped with stable Rust",
+      "paths": [
+        "src"
+      ],
+      "suffixes": [
+        ".md"
+      ],
+      "license_path": "LICENSE-APACHE"
+    },
+    {
+      "id": "cargo-book",
+      "repository": "https://github.com/rust-lang/cargo.git",
+      "ref": "@rust-stable:src/tools/cargo",
+      "version_policy": "Cargo Book at the Cargo commit shipped with stable Rust",
+      "paths": [
+        "src/doc/src"
+      ],
+      "suffixes": [
+        ".md"
+      ],
+      "license_path": "LICENSE-APACHE"
+    },
+    {
+      "id": "edition-guide",
+      "repository": "https://github.com/rust-lang/edition-guide.git",
+      "ref": "@rust-stable:src/doc/edition-guide",
+      "version_policy": "edition guide shipped with stable Rust; an edition is not a compiler version",
+      "paths": [
+        "src"
+      ],
+      "suffixes": [
+        ".md"
+      ],
+      "license_path": "LICENSE-APACHE"
+    },
+    {
+      "id": "nomicon",
+      "repository": "https://github.com/rust-lang/nomicon.git",
+      "ref": "@rust-stable:src/doc/nomicon",
+      "version_policy": "Nomicon at the stable Rust release submodule commit; examples may discuss unstable or unsafe features",
+      "paths": [
+        "src"
+      ],
+      "suffixes": [
+        ".md"
+      ],
+      "license_path": "LICENSE-APACHE"
+    },
+    {
+      "id": "tokio",
+      "package": "tokio",
+      "repository": "https://github.com/tokio-rs/tokio.git",
+      "ref": "@crates-stable:tokio",
+      "tag_template": "tokio-{version}",
+      "manifest_path": "tokio/Cargo.toml",
+      "version_policy": "latest non-yanked stable crate; exact release tag and manifest verification",
+      "paths": [
+        "tokio/src",
+        "tokio/Cargo.toml",
+        "tokio/README.md",
+        "tokio/CHANGELOG.md",
+        "examples",
+        "tokio-util/src",
+        "tokio-util/Cargo.toml"
+      ],
+      "suffixes": [
+        ".rs",
+        ".md",
+        ".toml"
+      ],
+      "license_path": "LICENSE"
+    },
+    {
+      "id": "axum",
+      "package": "axum",
+      "repository": "https://github.com/tokio-rs/axum.git",
+      "ref": "@crates-stable:axum",
+      "tag_template": "axum-v{version}",
+      "manifest_path": "axum/Cargo.toml",
+      "version_policy": "latest non-yanked stable axum; exact tag",
+      "paths": [
+        "axum/src",
+        "axum/Cargo.toml",
+        "axum/CHANGELOG.md",
+        "examples",
+        "README.md"
+      ],
+      "suffixes": [
+        ".rs",
+        ".md",
+        ".toml"
+      ],
+      "license_path": "LICENSE"
+    },
+    {
+      "id": "serde",
+      "package": "serde",
+      "repository": "https://github.com/serde-rs/serde.git",
+      "ref": "@crates-stable:serde",
+      "tag_template": "v{version}",
+      "manifest_path": "serde/Cargo.toml",
+      "version_policy": "latest non-yanked stable serde; exact tag",
+      "paths": [
+        "serde/src",
+        "serde/Cargo.toml",
+        "serde_derive/src",
+        "README.md",
+        "serde_core/src",
+        "serde_core/Cargo.toml"
+      ],
+      "suffixes": [
+        ".rs",
+        ".md",
+        ".toml"
+      ],
+      "license_path": "LICENSE-APACHE"
+    },
+    {
+      "id": "sqlx",
+      "package": "sqlx",
+      "repository": "https://github.com/launchbadge/sqlx.git",
+      "ref": "@crates-stable:sqlx",
+      "tag_template": "v{version}",
+      "manifest_path": "Cargo.toml",
+      "version_policy": "latest non-yanked stable sqlx; exact tag; database/feature compatibility must be checked in the project",
+      "paths": [
+        "src",
+        "sqlx-core/src",
+        "sqlx-postgres/src",
+        "sqlx-macros/src",
+        "examples",
+        "Cargo.toml",
+        "README.md",
+        "CHANGELOG.md"
+      ],
+      "suffixes": [
+        ".rs",
+        ".md",
+        ".toml"
+      ],
+      "license_path": "LICENSE-APACHE"
+    },
+    {
+      "id": "tracing",
+      "package": "tracing",
+      "repository": "https://github.com/tokio-rs/tracing.git",
+      "ref": "@crates-stable:tracing",
+      "tag_template": "tracing-{version}",
+      "manifest_path": "tracing/Cargo.toml",
+      "version_policy": "latest non-yanked stable tracing; sibling crates retain their own manifest versions",
+      "paths": [
+        "tracing/src",
+        "tracing/Cargo.toml",
+        "tracing-subscriber/src",
+        "examples",
+        "README.md",
+        "tracing-attributes/src",
+        "tracing-attributes/Cargo.toml",
+        "tracing-subscriber/Cargo.toml"
+      ],
+      "suffixes": [
+        ".rs",
+        ".md",
+        ".toml"
+      ],
+      "license_path": "LICENSE"
+    },
+    {
+      "id": "tower",
+      "package": "tower",
+      "repository": "https://github.com/tower-rs/tower.git",
+      "ref": "@crates-stable:tower",
+      "tag_template": "tower-{version}",
+      "manifest_path": "tower/Cargo.toml",
+      "version_policy": "latest non-yanked stable tower; exact tag",
+      "paths": [
+        "tower/src",
+        "tower/Cargo.toml",
+        "tower-service/src",
+        "README.md"
+      ],
+      "suffixes": [
+        ".rs",
+        ".md",
+        ".toml"
+      ],
+      "license_path": "LICENSE"
+    },
+    {
+      "id": "thiserror",
+      "package": "thiserror",
+      "repository": "https://github.com/dtolnay/thiserror.git",
+      "ref": "@crates-stable:thiserror",
+      "tag_template": "{version}",
+      "manifest_path": "Cargo.toml",
+      "version_policy": "latest non-yanked stable thiserror; exact tag",
+      "paths": [
+        "src",
+        "impl/src",
+        "Cargo.toml",
+        "README.md"
+      ],
+      "suffixes": [
+        ".rs",
+        ".md",
+        ".toml"
+      ],
+      "license_path": "LICENSE-APACHE"
+    },
+    {
+      "id": "anyhow",
+      "package": "anyhow",
+      "repository": "https://github.com/dtolnay/anyhow.git",
+      "ref": "@crates-stable:anyhow",
+      "tag_template": "{version}",
+      "manifest_path": "Cargo.toml",
+      "version_policy": "latest non-yanked stable anyhow; exact tag",
+      "paths": [
+        "src",
+        "Cargo.toml",
+        "README.md"
+      ],
+      "suffixes": [
+        ".rs",
+        ".md",
+        ".toml"
+      ],
+      "license_path": "LICENSE-APACHE"
+    }
+  ]
+}
