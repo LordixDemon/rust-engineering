@@ -1,5 +1,7 @@
 # Rust server decisions
 
+English | [Русский](server-engineering.ru.md)
+
 Use the sections relevant to the requested change. Verify API details against the resolved crate versions and feature gates.
 
 ## Ownership, tasks and shutdown

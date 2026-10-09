@@ -5,6 +5,8 @@ description: Implement, review, and modernize Rust code using a local versioned 
 
 # Rust engineering
 
+English | [Русский](SKILL.ru.md)
+
 Use exact source evidence to choose APIs, then validate behavior in the actual project. The knowledge graph is a navigation aid; rustc, rust-analyzer, Cargo and tests establish properties that lexical retrieval cannot.
 
 ## Find the project constraints
